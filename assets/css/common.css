@@ -1,0 +1,41 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+section {
+    padding: 4rem 10rem;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.new_amsterdam_regular {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.eng_header {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#scrollToTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}

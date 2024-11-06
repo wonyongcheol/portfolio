@@ -1,0 +1,106 @@
+.skill {
+    margin: 0.1rem;
+}
+
+/* header */
+#header {
+    border-bottom: 1px solid #000;
+}
+
+#header h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+/* aboutMe */
+#aboutMe {
+}
+
+
+#aboutMe .description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutMe .description .profile {
+    flex: 0 1 200px;
+    border-radius: 1000px;
+    width: 150px;
+    margin-right: 1rem;
+}
+
+#aboutMe .description .intro {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+}
+
+#aboutMe .description .intro dt {
+    font-weight: 500;
+}
+
+#aboutMe .description .intro dd {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#aboutMe .btns {
+    margin-top: 2rem;
+}
+
+/* projects */
+#projects .title {
+    font-weight: 600;
+}
+
+#aboutMe {
+}
+
+#projects .project_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #000;
+}
+
+#projects .project_wrap:last-child {
+    border-bottom: 0;
+}
+
+#projects .project_wrap > div {
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+#projects .project_wrap .period {
+    flex: 0 1 200px;
+    border-right: 1px solid #000;
+}
+
+#projects .project_wrap .period span {
+    display: block;
+}
+
+#projects .project_wrap .period span:first-child {
+    font-size: 1.2rem;
+}
+
+#projects .project_wrap .contents {
+    flex: 1 1 40%;
+}
+
+#projects .project_wrap .contents .item {
+    margin-bottom: 0.5rem;
+}
+
+#projects .project_wrap .images .card {
+    margin-bottom: 1rem;
+}
+
+#projects .project_wrap .images .card:last-child {
+    margin-bottom: 0;
+}
+
+#projects .project_wrap .images .card .card-title {
+    font-weight: 500;
+
+}
