@@ -131,7 +131,7 @@ const portfolio =
                             'jquery',
                             'Maria DB',
                         ],
-                        description: "ZEB(제로 에너지 빌딩) 관리<br>PHP Laravel 컨버팅 작업",
+                        description: "ZEB(제로 에너지 빌딩) 관리<br>PHP Laravel 마이그레이션 작업",
                         images : [
                             {
                                 title : '메인',
@@ -200,7 +200,7 @@ const portfolio =
                             'Jquery',
                             'Maria DB',
                         ],
-                        description: "단지별 에너지 관리<br>PHP Laravel 컨버팅 작업",
+                        description: "단지별 에너지 관리<br>PHP Laravel 마이그레이션 작업",
                         images : [
                             {
                                 title : '메인',
@@ -290,5 +290,77 @@ const portfolio =
                     },
                 ],
             },
+            {
+                company: "인터엠",
+                period: "2014.01~2016.07,<br>2016.12~2022.06",
+                contents: [
+                    {
+                        title: "네트워크 오디오 전송 시스템",
+                        skills: [
+                            'PHP',
+                            'jquery',
+                            'mysql'
+                        ],
+                        description: "네트워크 오디오 전송 시스템",
+                        images : [
+                            {
+                                title : '시스템 구성도',
+                                description : '',
+                                image : './assets/images/portfolio/interm/system.png',
+                            },
+                            {
+                                title : '장치 등록',
+                                description : '로컬에 연결된 장치를 탐색하여 등록합니다.',
+                                image : './assets/images/portfolio/interm/device.png',
+                            },
+                            {
+                                title : '오디오 설정',
+                                description : '오디오 전송 방식을 설정합니다.',
+                                image : './assets/images/portfolio/interm/audio.png',
+                            },
+                            {
+                                title : '소스 등록',
+                                description : '오디오 소스(server)를 등록합니다.',
+                                image : './assets/images/portfolio/interm/source.png',
+                            },
+                            {
+                                title : '존 등록',
+                                description : '존(client)을 등록합니다.',
+                                image : './assets/images/portfolio/interm/zone.png',
+                            },
+                            {
+                                title : '운영',
+                                description : '장치에 연결한 소스와 존을 이용해 방송을 운영합니다.',
+                                image : './assets/images/portfolio/interm/operate.png',
+                            },
+                            {
+                                title : '조감도',
+                                description : '운영중인 방송의 위치를 조감도로 확인/운영합니다.',
+                                image : './assets/images/portfolio/interm/birdview.png',
+                            },
+                            {
+                                title : '스케줄',
+                                description : '방송 스케줄을 등록합니다.',
+                                image : './assets/images/portfolio/interm/schedule.png',
+                            },
+                            {
+                                title : '캘린더',
+                                description : '등록한 스케줄을 캘린더로 확인합니다.',
+                                image : './assets/images/portfolio/interm/calendar.png',
+                            },
+                            {
+                                title : '장애이력',
+                                description : '장애이력을 등록하여 관리합니다.',
+                                image : './assets/images/portfolio/interm/failure.png',
+                            },
+                            {
+                                title : '로그',
+                                description : '실시간 로그를 모니터링 합니다.',
+                                image : './assets/images/portfolio/interm/log.png',
+                            },
+                        ],
+                    },
+                ],
+            }
         ]
     }
