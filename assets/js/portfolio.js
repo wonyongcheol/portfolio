@@ -100,24 +100,13 @@ const portfolio =
             github: '<img class="skill" src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"/>',
             html: '<img class="skill" src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>',
             css: '<img class="skill" src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>',
+            sqlite: '<img class="skill" src="https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>',
+            springboot: '<img class="skill" src="https://img.shields.io/badge/spring%20boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"/>',
+            react: '<img class="skill" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>',
+            jira: '<img class="skill" src="https://img.shields.io/badge/jira-0052CC?style=for-the-badge&logo=jira&logoColor=white"/>',
+            github: '<img class="skill" src="https://img.shields.io/badge/github%20api-181717?style=for-the-badge&logo=github&logoColor=white"/>',
         },
         items: [
-            // {
-            //     company: "",
-            //     period: "",
-            //     contents: [
-            //         {
-            //             title: "",
-            //             skills: [],
-            //             description: ""
-            //         },
-            //         {
-            //             title: "",
-            //             skills: [],
-            //             description: ""
-            //         }
-            //     ],
-            // },
             {
                 company: "케빈랩",
                 period: "2022.11~",
@@ -299,7 +288,7 @@ const portfolio =
                         skills: [
                             'PHP',
                             'jquery',
-                            'mysql'
+                            'sqlite'
                         ],
                         description: "네트워크 오디오 전송 시스템",
                         images : [
@@ -362,5 +351,48 @@ const portfolio =
                     },
                 ],
             }
-        ]
+        ],
+        githubRepos: [
+            {
+                name: "하이웍스 일정(바이브 코딩)",
+                description: "하이웍스 일정을 내부 API를 이용해 크롤링하여 윈도우 프로그램으로 제작",
+                skills: ["Python", "selenium"],
+                url: "https://github.com/wonyongcheol/hiworks-schedule"
+            },
+            {
+                name: "Jira, Github 업무일지(바이브 코딩)",
+                description: "Jira, Github 업무일지 자동화 프로그램",
+                skills: ["springboot", "jira", "github", "react", "GROQ API(AI)"],
+                url: "https://github.com/wonyongcheol/jira-github-taskreport"
+            }
+        ],
+        bindGithubRepos: function () {
+            let html = `<h2>GitHub 레포지토리</h2><div class="repo-list">`;
+            this.githubRepos.forEach(function(repo) {
+                html += `<div class="repo-item">`;
+                html += `<h3>${repo.name}</h3>`;
+                html += `<a class="repo-link" href="${repo.url}" target="_blank">깃허브 바로가기</a>`;
+                html += `<p class="repo-desc">${repo.description}</p>`;
+                // 뱃지와 텍스트 분리
+                let badgeSkills = [];
+                let textSkills = [];
+                repo.skills.forEach(function(skill) {
+                    let key = skill.replaceAll(' ', '').toLowerCase();
+                    if (portfolio.badges[key]) {
+                        badgeSkills.push(portfolio.badges[key].replaceAll('for-the-badge', 'flat-squre'));
+                    } else if (skill && skill.trim() !== "") {
+                        textSkills.push(skill);
+                    }
+                });
+                if (badgeSkills.length > 0) {
+                    html += `<div class="badges">${badgeSkills.join('')}</div>`;
+                }
+                if (textSkills.length > 0) {
+                    html += `<div class="skills-text">${textSkills.join(', ')}</div>`;
+                }
+                html += `</div>`;
+            });
+            html += `</div>`;
+            $('#github-repo').html(html);
+        },
     }

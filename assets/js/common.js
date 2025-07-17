@@ -6,6 +6,7 @@ const common =
         events: function () {
             portfolio.bindSkills();
             portfolio.bindItems();
+            portfolio.bindGithubRepos();
 
             $('[data-toggle="tooltip"]').tooltip();
 
